@@ -1,6 +1,6 @@
 
 
-export default function Jogo({imagem, funcao, letras, estado, selecionada, fimJogo}){
+export default function Jogo({imagem, funcao, letras, selecionada, fimJogo}){
 
     
 

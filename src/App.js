@@ -2,6 +2,7 @@ import './style/reset.css';
 import './style/style.css';
 import Jogo from "./Jogo"
 import Letras from "./Letras"
+import Chute from "./Chute"
 import palavras from "./palavras"
 import forca0 from "./assets/forca0.png"
 import forca1 from "./assets/forca1.png"
@@ -73,9 +74,9 @@ export default function App() {
 
 
   return <>
-    <Jogo imagem={imgForca} funcao={iniciarJogo} letras={letras} estado={!disabled} selecionada={selecionada} fimJogo={fimJogo}/>
+    <Jogo imagem={imgForca} funcao={iniciarJogo} letras={letras} selecionada={selecionada} fimJogo={fimJogo}/>
     <Letras estado ={disabled} selecionada={selecionada} funcao={selecionarLetra}/>
-
+    <Chute estado={disabled}/>
   </>
 
 }

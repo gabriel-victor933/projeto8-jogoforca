@@ -1,4 +1,5 @@
-body, #root {
+body,
+#root {
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -10,7 +11,7 @@ body, #root {
     width: 95vw;
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .jogo img {
@@ -52,7 +53,7 @@ body, #root {
     font-size: 50px;
 }
 
-.jogo .word span{
+.jogo .word span {
     margin: 5px;
 }
 
@@ -69,7 +70,7 @@ body, #root {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 15px;
 }
 
 .letras button {
@@ -88,7 +89,56 @@ body, #root {
     color: #39739D;
 }
 
-.letras button:disabled{
+.letras button:disabled {
+    background-color: #9FAAB5;
+    color: #798A9F;
+}
+
+.chute {
+    width: 50vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.chute p {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.chute input {
+    width: 353px;
+    height: 40px;
+
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+
+    font-size: 20px;
+}
+
+.chute button {
+    width: 100px;
+    height: 40px;
+
+    background: #E1ECF4;
+    border: 1px solid #7AA7C7;
+    border-radius: 3px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3c76a1;
+}
+
+.chute button:disabled {
     background-color: #9FAAB5;
     color: #798A9F;
 }
