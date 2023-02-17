@@ -56,6 +56,14 @@ body, #root {
     margin: 5px;
 }
 
+.jogo .ganhou {
+    color: green;
+}
+
+.jogo .perdeu {
+    color: red;
+}
+
 .letras {
     width: 50vw;
     display: flex;

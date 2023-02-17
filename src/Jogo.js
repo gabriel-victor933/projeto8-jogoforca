@@ -1,16 +1,16 @@
 
 
-export default function Jogo({imagem, funcao, palavra}){
+export default function Jogo({imagem, funcao, letras, estado, selecionada, fimJogo}){
 
-    const letras = palavra.split("")
+    
 
     return <>
         <div className="jogo">  
-            <img src = {imagem} alt="forca"></img>
+            <img data-test="game-image" src = {imagem} alt="forca"></img>
 
             <div>
-            <button onClick={funcao}>Escolher Palavra</button>
-            <div className="word">{letras.map((l) => <span>_</span>)}</div>
+            <button data-test="choose-word" onClick={funcao} disabled={estado}>Escolher Palavra</button>
+            <div data-test="word" className={`word ${fimJogo}`} >{letras.map((l) => <span>{selecionada.includes(l) || fimJogo != ""? l : "_"}</span>)}</div>
             </div> 
 
         </div>
