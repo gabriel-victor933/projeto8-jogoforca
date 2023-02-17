@@ -26,6 +26,9 @@ export default function App() {
   
 
   const letras = palavra.split("")
+  const letrasNormalizadas = palavra.normalize('NFD').replace(/[\u0300-\u036f]/g, '').split("")
+  
+  
 
   function iniciarJogo(){
     setDisabled(false)
@@ -36,6 +39,7 @@ export default function App() {
 
     setPalavra(palavras[Math.floor(Math.random()*(palavras.length))])
   }
+  console.log(selecionada)
 
   function selecionarLetra(p){
 
@@ -43,7 +47,7 @@ export default function App() {
 
     setSelecionada(novaSelecionada)
 
-    if(!letras.includes(p)){
+    if(!letrasNormalizadas.includes(p)){
 
       let newErros = erros + 1;
       setImgForca(img[newErros])
@@ -62,8 +66,8 @@ export default function App() {
   function checarFimdeJogo(arr){
     
     let end = true;
-    for(let i = 0; i < letras.length; i++){
-      end = end && arr.includes(letras[i]);
+    for(let i = 0; i < letrasNormalizadas.length; i++){
+      end = end && arr.includes(letrasNormalizadas[i]);
     }
 
     if(end){
