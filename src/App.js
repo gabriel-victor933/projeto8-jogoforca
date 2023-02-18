@@ -87,6 +87,7 @@ export default function App() {
       setFimjogo("ganhou")
     } else {
       setFimjogo("perdeu")
+      setImgForca(img[6])
       
     }
 
