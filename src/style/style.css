@@ -7,63 +7,6 @@ body,
     align-items: center;
 }
 
-.jogo {
-    width: 95vw;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-}
-
-.jogo img {
-    width: 400px;
-    height: 467px;
-}
-
-.jogo button {
-    width: 200px;
-    height: 60px;
-    border-radius: 8px;
-    background-color: #27AE60;
-    color: white;
-    border: none;
-    margin-top: 20px;
-    margin-right: 20px;
-
-    font-family: "Roboto";
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 23px;
-    font-style: normal;
-
-
-}
-
-.jogo>div {
-    height: 467px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-.jogo .word {
-    margin-bottom: 90px;
-    margin-right: 90px;
-    font-family: "noto Sans";
-    font-size: 50px;
-}
-
-.jogo .word span {
-    margin: 5px;
-}
-
-.jogo .ganhou {
-    color: green;
-}
-
-.jogo .perdeu {
-    color: red;
-}
 
 
 
