@@ -6,6 +6,11 @@ display: flex;
 flex-wrap: wrap;
 justify-content: center;
 margin-top: 15px;
+
+
+@media (max-width: 800px) {
+    width: 90vw
+  }
 `;
 
 const Botao = styled.button`
@@ -21,7 +26,10 @@ font-size: 16px;
 line-height: 19px;
 
 background-color: ${props => props.disabled ? "#9FAAB5": "#E1ECF4"};
-color: ${props => props.disabled ? "#798A9F": "#39739D"}`;
+color: ${props => props.disabled ? "#798A9F": "#39739D"}
+
+
+`;
 
 
 export default function Letras({estado, selecionada, funcao}){

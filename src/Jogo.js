@@ -9,7 +9,13 @@ margin-top: 15px;
 
 const Imagem = styled.img`
 width: 400px;
-height: 467px;`;
+height: 467px;
+
+@media (max-width: 800px) {
+    width: 45%;
+    height: 52%;
+  }
+`;
 
 const Botao = styled.button`
 width: 200px;
@@ -25,6 +31,13 @@ font-size: 20px;
 font-weight: 700;
 line-height: 23px;
 font-style: normal;
+
+@media (max-width: 800px) {
+    width: 60%;
+    height: 15%;
+    font-size: 15px;
+  }
+
 `;
 
 const Divword = styled.div`
@@ -33,6 +46,10 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 align-items: flex-end;
+
+@media (max-width: 800px) {
+    height: 55vw;
+  }
 `;
 
 const Word = styled.div`
@@ -41,6 +58,11 @@ margin-right: 90px;
 font-family: "noto Sans";
 font-size: 50px;
 color: ${props => props.fim == "ganhou"? "green": props.fim == "perdeu"? "red" :  "black"};
+
+@media (max-width: 800px) {
+    margin-bottom: 40px;
+    margin-right: 20px;
+  }
 `;
 
 const Letras = styled.span`

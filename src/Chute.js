@@ -6,6 +6,10 @@ display: flex;
 justify-content: space-evenly;
 align-items: center;
 margin-top: 15px;
+
+@media (max-width: 800px) {
+    width: 90%;
+  }
 `;
 
 const Para = styled.p`
@@ -26,6 +30,10 @@ box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
 border-radius: 3px;
 
 font-size: 20px;
+
+@media (max-width: 800px) {
+    width: 70%;
+  }
 `;
 
 const Botao = styled.button`
