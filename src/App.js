@@ -23,6 +23,7 @@ export default function App() {
   const [erros,setErros] = useState(0)
   const [imgForca, setImgForca] = useState(img[erros])
   const [fimJogo, setFimjogo] = useState("")
+  const [input, setInput] = useState("")
   
 
   const letras = palavra.split("")
@@ -36,10 +37,10 @@ export default function App() {
     setSelecionada([])
     setErros(0)
     setImgForca(img[0])
+    setInput("")
 
     setPalavra(palavras[Math.floor(Math.random()*(palavras.length))])
   }
-  console.log(selecionada)
 
   function selecionarLetra(p){
 
@@ -76,11 +77,26 @@ export default function App() {
     }
   }
 
+  function chute(p){
+    setInput(p)
+  }
+
+  function verificarChute(){
+
+    if(input == palavra){
+      setFimjogo("ganhou")
+    } else {
+      setFimjogo("perdeu")
+      
+    }
+
+    setDisabled(true)
+  }
 
   return <>
     <Jogo imagem={imgForca} funcao={iniciarJogo} letras={letras} selecionada={selecionada} fimJogo={fimJogo}/>
     <Letras estado ={disabled} selecionada={selecionada} funcao={selecionarLetra}/>
-    <Chute estado={disabled}/>
+    <Chute estado={disabled} chute={chute} verificar={verificarChute} input={input}/>
   </>
 
 }
